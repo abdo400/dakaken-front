@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>العناوين</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+            rel="stylesheet">
+
+        <!--------------- fontawsome ------------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" type="text/css" href="/output.css" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    </head>
+
+    <body dir="rtl">
+
+        <div class="container mx-auto p-2 mt-20 arabic-regular">
+            <ul
+                class="flex px-2 md:px-0 flex-wrap text-sm font-medium text-center text-gray-400 arabic-regular">
+                <li class="me-2">
+                    <a href="/homepage/Dakaken Home Page.html"
+                        aria-current="page"
+                        class="inline-block p-4 rounded-t-lg w-[120px] rounded-tl-[100px]">الرئيسية</a>
+                </li>
+
+                <li class="me-2">
+                    <a href="/addressList/addressList.html"
+                        class="inline-block p-4 rounded-t-lg bg-[#2DB2D4] text-white ">
+                        المواقع المحفوظة
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="my-5 p-2 flex items-center">
+                <h3 class="text-sm me-5">المواقع المحفوظة</h3>
+
+                <button
+                    data-modal-target="AddModal"
+                    data-modal-toggle="AddModal"
+                    class="flex text-[#3772FF]   focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-1 py-2.5 text-center hover:opacity-80"
+                    type="button">
+
+                    <svg class="me-2" width="24"
+                        height="24"
+                        viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.4">
+                            <path d="M8 12H16"
+                                stroke="#3772FF"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 16V8"
+                                stroke="#3772FF"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                        <path
+                            d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                            stroke="#3772FF"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                    إضافة عنوان جديد
+
+                </button>
+            </div>
+
+            <div class="my-5 p-2">
+                <div id="cardList" class="grid md:grid-cols-2 gap-x-5">
+                    
+                   
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- modal add Address -->
+
+        <div id="AddModal" tabindex="-1" aria-hidden="true"
+            class="hidden bg-[#0000009c] overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full max-h-full">
+            <div class="relative p-4 w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow">
+                    <!-- Modal header -->
+                    <div>
+                        <div
+                            class="flex items-center justify-between p-4 md:p-5 rounded-t ">
+                            <div
+                                class="text-md flex items-center font-medium  text-gray-700 ">
+                                اضافة عنوان جديد
+
+                            </div>
+
+                            <button type="button"
+                                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
+                                data-modal-hide="AddModal">
+                                <svg class="w-3 h-3" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 14 14">
+                                    <path stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="p-4  md:p-5 ">
+                        <form action="#">
+                            <div class="grid md:grid-cols-2 mb-3 gap-5">
+                                <div>
+                                    <label class="text-sm font-medium"
+                                        for="address">العنوان</label>
+                                    <input type="text" name="address"
+                                        id="address"
+                                        class="bg-gray-50 mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                        placeholder="اكتب العنوان" />
+                                </div>
+                                <div>
+                                    <label class="text-sm font-medium"
+                                        for="country">الدولة</label>
+                                    <input type="text" name="country"
+                                        id="country"
+                                        class="bg-gray-50 mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                        placeholder="اكتب اسم الدولة" />
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 my-5 gap-5">
+                                <div>
+                                    <label class="text-sm font-medium"
+                                        for="city">البلدة/المدينة</label>
+                                    <input type="text" name="city" id="city"
+                                        class="bg-gray-50 mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                        placeholder="المدينة" />
+                                </div>
+                                <div>
+                                    <label class="text-sm font-medium"
+                                        for="zip">الرمز البريدي</label>
+                                    <input type="text" name="zip" id="zip"
+                                        class="bg-gray-50 mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                        placeholder="الرمز البريدي" />
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 mt-7 gap-2 md:gap-5">
+                                <button type="submit"
+                                    class="w-full text-white bg-[#F49B57] hover:opacity-80  focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                                    حفظ
+                                </button>
+                                <button
+                                    data-modal-hide="AddModal"
+                                    class="w-full  text-red-600 bg-white hover:opacity-80 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                                    الغاء
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal Edit Address -->
+
+        <div id="EditModal" tabindex="-1" aria-hidden="true"
+            class="hidden bg-[#0000009c] overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full max-h-full">
+            <div class="relative p-4 w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow">
+                    <!-- Modal header -->
+                    <div>
+                        <div
+                            class="flex items-center justify-between p-4 md:p-5 rounded-t ">
+                            <div
+                                class="text-md flex items-center font-medium  text-gray-700 ">
+                                اضافة عنوان جديد
+
+                            </div>
+
+                            <button type="button"
+                                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
+                                data-modal-hide="EditModal">
+                                <svg class="w-3 h-3" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 14 14">
+                                    <path stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="p-4  md:p-5 ">
+                        <form action="#">
+                            <div class="grid md:grid-cols-2 mb-3 gap-5">
+                                <div>
+                                    <label class="text-sm font-medium"
+                                        for="addressEdit">العنوان</label>
+                                    <input type="text" name="addressEdit"
+                                        id="addressEdit"
+                                        class="bg-gray-50 mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                        placeholder="اكتب العنوان" />
+                                </div>
+                                <div>
+                                    <label class="text-sm font-medium"
+                                        for="countryEdit">الدولة</label>
+                                    <input type="text" name="countryEdit"
+                                        id="countryEdit"
+                                        class="bg-gray-50 mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                        placeholder="اكتب اسم الدولة" />
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 my-5 gap-5">
+                                <div>
+                                    <label class="text-sm font-medium"
+                                        for="cityEdit">البلدة/المدينة</label>
+                                    <input type="text" name="cityEdit" id="cityEdit"
+                                        class="bg-gray-50 mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                        placeholder="المدينة" />
+                                </div>
+                                <div>
+                                    <label class="text-sm font-medium"
+                                        for="zipEdit">الرمز البريدي</label>
+                                    <input type="text" name="zipEdit" id="zipEdit"
+                                        class="bg-gray-50 mt-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                        placeholder="الرمز البريدي" />
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 mt-7 gap-2 md:gap-5">
+                                <button type="submit"
+                                    class="w-full text-white bg-[#F49B57] hover:opacity-80  focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                                    حفظ
+                                </button>
+                                <button
+                                    data-modal-hide="EditModal"
+                                    class="w-full  text-red-600 bg-white hover:opacity-80 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                                    الغاء
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js">
+</script>
+    </body>
+
+</html>

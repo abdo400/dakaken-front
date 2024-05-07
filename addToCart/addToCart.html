@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Add To Cart</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+            rel="stylesheet">
+
+        <!--------------- fontawsome ------------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" type="text/css" href="/output.css" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    </head>
+
+    <body dir="rtl">
+
+        <div class="container mx-auto mt-20">
+            <ul
+                class="flex flex-wrap text-sm font-medium text-center text-gray-400 arabic-regular">
+                <li class="me-2">
+                    <a href="/homepage/Dakaken Home Page.html" aria-current="page"
+                        class="inline-block p-4 rounded-t-lg w-[120px] rounded-tl-[100px]">الرئيسية</a>
+                </li>
+                <li class="me-2">
+                    <a href="#"
+                        class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 ">ملابس
+                        واحذية</a>
+                </li>
+                <li class="me-2">
+                    <a href="/addToCart/addToCart.html"
+                        class="inline-block p-4 rounded-t-lg bg-[#2DB2D4] text-white ">سلة
+                        التسوق</a>
+                </li>
+
+            </ul>
+
+            <div id="parentAddToCart"
+                class="grid  lg:grid-cols-3 xl:grid-cols-2  mt-10 md:gap-5">
+                <div class="lg:col-span-2 xl:col-span-1">
+                    <div
+                        class="flex justify-between items-center px-5 shadow-sm py-3 rounded-xl">
+                        <p class="text-sm arabic-regular">كل النتائج</p>
+                        <div class="flex text-sm">
+                            <p id="totalCards" class="text-gray-500"></p>
+                            <button id="deleteAll"
+                                class="ms-2 text-red-600 font-semibold ">ازالة</button>
+                        </div>
+                    </div>
+
+                    <div
+                        id="cards"
+                        class="bg-white p-2 border border-gray-200 rounded-3xl mt-7">
+
+                    </div>
+                </div>
+
+                <div class="px-5 py-3 arabic-regular">
+                    <h2 class="text-gray-600">ملخص الطلب</h2>
+
+                    <div class="mt-10">
+                        <div>
+                            <div class="flex items-center">
+                                <svg width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.4"
+                                        d="M8.32031 15.27L14.8603 8.72998"
+                                        stroke="#2DB2D4" stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path opacity="0.4"
+                                        d="M8.73001 10.3701C9.40932 10.3701 9.95999 9.81948 9.95999 9.14017C9.95999 8.46086 9.40932 7.91016 8.73001 7.91016C8.0507 7.91016 7.5 8.46086 7.5 9.14017C7.5 9.81948 8.0507 10.3701 8.73001 10.3701Z"
+                                        stroke="#2DB2D4" stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path opacity="0.4"
+                                        d="M15.27 16.0899C15.9493 16.0899 16.5 15.5392 16.5 14.8599C16.5 14.1806 15.9493 13.6299 15.27 13.6299C14.5907 13.6299 14.04 14.1806 14.04 14.8599C14.04 15.5392 14.5907 16.0899 15.27 16.0899Z"
+                                        stroke="#2DB2D4" stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                        stroke="#2DB2D4" stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span class="ms-2 text-sm text-gray-500">كوبون
+                                    الخصم</span>
+                            </div>
+
+                            <div class="relative w-full my-5">
+                                <input type="search" id="search-dropdown"
+                                    class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-xl  border border-gray-300 focus:ring-[#2DB2D4] focus:border-[#2DB2D4] "
+                                    placeholder="أدخل رمز القسيمة هنا"
+                                    required />
+                                <button type="submit"
+                                    class="absolute w-24  lg:w-28 xl:w-32 top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-[#2DB2D4] rounded-xl border border-[#2DB2D4] hover:bg-[#2DB2D4]/70 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+                                    تطبيق
+                                    <span class="sr-only">Search</span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <div
+                                    class="flex justify-between items-center my-7">
+                                    <p class="text-gray-600">المجموع الفرعي </p>
+                                    <span
+                                        class="font-medium text-gray-500">$149.94</span>
+
+                                </div>
+                                <div
+                                    class="flex justify-between items-center my-7">
+                                    <p class="text-gray-600"> الشحن </p>
+                                    <span
+                                        class="font-medium text-gray-500">-</span>
+
+                                </div>
+                                <div
+                                    class="flex justify-between items-center my-7">
+                                    <p class="text-gray-600"> القيمة
+                                        المضافة(10%) </p>
+                                    <span
+                                        class="font-medium text-gray-500">$1.45</span>
+
+                                </div>
+                                <div
+                                    class="flex justify-between items-center my-7">
+                                    <p class="font-bold"> اجمالى المبلغ </p>
+                                    <span
+                                        class="font-bold">$149.94</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mt-10">
+                                <h3 class="text-lg">اختر طرق الدفع</h3>
+
+                                <div class="mt-5">
+
+                                    <div class="flex p-2 rounded items-center">
+                                        <div class="flex items-center h-5">
+                                            <input
+                                                onclick="handleChangeCredit()"
+                                                id="payment1" name="payment"
+                                                type="radio" value
+                                                class="w-4 h-4 text-[#F49B57]  border-gray-400 focus:focus:ring-[#F49B57]    focus:ring-2 ">
+                                        </div>
+                                        <div class="ms-2 text-sm">
+                                            <label for="payment1"
+                                                class="font-medium">
+                                                <span
+                                                    class="text-sm ms-5 mb-5 text-gray-500">الدفع
+                                                    بواسطة بطاقة الائتمان</span>
+
+                                                <img class="ms-5 mt-3"
+                                                    src="./debitsImg.svg" alt>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div id="addCredit" class="mt-7">
+                                        <button
+                                            data-modal-target="authentication-modal"
+                                            data-modal-toggle="authentication-modal"
+                                            class="flex items-center text-[#2DB2D4] font-semibold">
+                                            <svg class="me-3" width="24"
+                                                height="25"
+                                                viewBox="0 0 24 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.4">
+                                                    <path d="M2 9.00488H22"
+                                                        stroke="#2DB2D4"
+                                                        stroke-width="1.5"
+                                                        stroke-miterlimit="10"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M6 17.0049H8"
+                                                        stroke="#2DB2D4"
+                                                        stroke-width="1.5"
+                                                        stroke-miterlimit="10"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M10.5 17.0049H14.5"
+                                                        stroke="#2DB2D4"
+                                                        stroke-width="1.5"
+                                                        stroke-miterlimit="10"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <path
+                                                    d="M6.44 4.00488H17.55C21.11 4.00488 22 4.88488 22 8.39488V16.6049C22 20.1149 21.11 20.9949 17.56 20.9949H6.44C2.89 21.0049 2 20.1249 2 16.6149V8.39488C2 4.88488 2.89 4.00488 6.44 4.00488Z"
+                                                    stroke="#2DB2D4"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                            اضافة بطاقة بنكية
+
+                                        </button>
+
+                                    </div>
+
+                                    <div
+                                        class="flex p-2 rounded items-center mt-7">
+                                        <div class="flex items-center h-5">
+                                            <input
+                                                onclick="handleChangeCredit()"
+                                                id="payment2" name="payment"
+                                                type="radio"
+                                                class="w-4 h-4 text-[#F49B57]  border-gray-400 focus:focus:ring-[#F49B57]    focus:ring-2 ">
+                                        </div>
+                                        <div class="ms-2 text-sm">
+                                            <label for="payment2"
+                                                class="font-medium">
+                                                <span
+                                                    class="text-sm ms-5 mb-5 text-gray-500">الدفع
+                                                    نقدا</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-2 gap-5 mt-7">
+                                        <a href="../shipping/shipping.html" class="inline-block text-center select-none cursor-pointer bg-[#F49B57] p-3 text-white font-medium rounded-xl outline-none border border-[#F49B57] hover:opacity-80">اكمال الشراء</a>
+                                        <a href="/homepage/Dakaken Home Page.html" class="inline-block text-center select-none cursor-pointer p-3 text-[#2DB2D4] font-medium rounded-xl outline-none border border-transparent hover:border-[#2DB2D4]">مواصلة التسوق</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- no credit -->
+
+            <div id="parentNoCart" class="hidden mt-20 p-5">
+                <div class="flex flex-col items-center justify-center">
+                    <h2 class="font-semibold text-xl">عفوًا....لم يتم العثور على
+                        أي منتجات</h2>
+                    <p
+                        class="text-gray-500 my-3 text-center text-sm">"في الوقت الحالي، قائمة أمنياتك فارغة، ولا توجد منتجات مضافة في الوقت الحالي."</p>
+
+                    <img class="mt-5" src="./noCartImg.svg" alt="">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- modal credit -->
+
+        <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+            class="hidden bg-[#0000009c] overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-full max-h-full">
+            <div class="relative p-4 w-full max-w-md max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow">
+                    <!-- Modal header -->
+                    <div>
+                        <div
+                            class="flex items-center justify-between p-4 md:p-5 rounded-t ">
+                            <div
+                                class="text-lg flex items-center font-medium  text-gray-700 ">
+                                <svg class="me-3" width="24" height="25"
+                                    viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.4">
+                                        <path d="M2 9.00488H22"
+                                            stroke="#2DB2D4"
+                                            stroke-width="1.5"
+                                            stroke-miterlimit="10"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M6 17.0049H8"
+                                            stroke="#2DB2D4"
+                                            stroke-width="1.5"
+                                            stroke-miterlimit="10"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M10.5 17.0049H14.5"
+                                            stroke="#2DB2D4"
+                                            stroke-width="1.5"
+                                            stroke-miterlimit="10"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                    <path
+                                        d="M6.44 4.00488H17.55C21.11 4.00488 22 4.88488 22 8.39488V16.6049C22 20.1149 21.11 20.9949 17.56 20.9949H6.44C2.89 21.0049 2 20.1249 2 16.6149V8.39488C2 4.88488 2.89 4.00488 6.44 4.00488Z"
+                                        stroke="#2DB2D4"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                طرق الدفع
+
+                            </div>
+
+                            <button type="button"
+                                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
+                                data-modal-hide="authentication-modal">
+                                <svg class="w-3 h-3" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 14 14">
+                                    <path stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+
+                        </div>
+                        <div class="mx-5">
+                            <img src="./debitsImg.svg" alt>
+                        </div>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="p-4 md:p-5">
+                        <form class="space-y-4" action="#">
+                            <div>
+                                <input type="text" name="name" id="name"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                    placeholder="اسم حامل البطاقة" required />
+                            </div>
+                            <div>
+
+                                <input type="number" name="number"
+                                    id="number" placeholder="رقم البطاقة"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                    required />
+                            </div>
+                            <div class="flex justify-between gap-5">
+
+                                <input type="date" name="date"
+                                    id="date" placeholder="تاريخ الانتهاء"
+                                    class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                    required />
+                                <input type="number" name="cvv"
+                                    id="cvv" placeholder="CVV"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F49B57] focus:border-[#F49B57] block w-full p-2.5 "
+                                    required />
+
+                            </div>
+                            <button type="submit"
+                                class="w-full text-white bg-[#F49B57] hover:opacity-80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                                تاكيد الدفع
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js">
+</script>
+        <script src="app.js"></script>
+    </body>
+
+</html>
