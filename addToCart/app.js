@@ -9,7 +9,7 @@ let data = [
         name: "شاشة LED ذات جودة عالية في العالم",
         price: "976.33",
         serial: "SKU 12314124124",
-        image: "/homepage/images/Jacket.svg",
+        image: "../homepage/images/Jacket.svg",
         qnt: 1
     },
     {
@@ -17,7 +17,7 @@ let data = [
         name: "شاشة LED ذات جودة عالية في العالم",
         price: "976.33",
         serial: "SKU 12314124124",
-        image: "/homepage/images/instagram_img_8.svg",
+        image: "../homepage/images/instagram_img_8.svg",
         qnt: 2
     },
 ]
