@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WishList</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+            rel="stylesheet">
+
+        <!--------------- fontawsome ------------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" type="text/css" href="../output.css" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    </head>
+
+    <body dir="rtl">
+
+        <div class="container mx-auto mt-20">
+            <ul
+                class="flex flex-wrap text-sm font-medium text-center text-gray-400 arabic-regular">
+                <li class="me-2">
+                    <a href="../homepage/Dakaken Home Page.html" aria-current="page"
+                        class="inline-block p-4 rounded-t-lg w-[120px] rounded-tl-[100px]">الرئيسية</a>
+                </li>
+                
+                <li class="me-2">
+                    <a href="wishlist.html"
+                        class="inline-block p-4 rounded-t-lg bg-[#2DB2D4] text-white ">
+                        المفضلة
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="mt-10" id="parentAddToCart">
+                    <div
+                        class="flex justify-between items-center px-2 md:px-3 shadow-sm py-3 rounded-xl">
+                        <div>
+                            <input onclick="toggle(this)" id="selectAll" type="checkbox" class="w-4 h-4 me-3  text-[#F49B57] bg-gray-200 border-gray-300 rounded focus:ring-[#F49B57] focus:ring-2">
+                            <label for="selectAll" class="text-sm arabic-regular font-semibold select-none">تحديد الكل</label>
+                        </div>
+                        <div class="flex text-sm">
+                            <p id="totalCards" class="text-gray-500"></p>
+                            <button id="deleteAll"
+                                class="ms-2 text-red-600 font-semibold ">ازالة</button>
+                        </div>
+                    </div>
+
+                    <div
+                        id="cards"
+                        class="bg-white p-2  mt-7">
+
+                    </div>
+                    <div class="flex justify-end mb-10 mt-5 px-2">
+                        <a href="#"
+                            class="inline-block w-full md:w-1/2  text-center select-none cursor-pointer bg-[#F49B57] p-3 text-white font-medium rounded-xl outline-none border border-[#F49B57] hover:opacity-80">اكمال
+                            الطلب</a>
+                    </div>
+
+            </div>
+
+            <!-- no credit -->
+
+            <div id="parentNoCart" class="hidden mt-20 p-5">
+                <div class="flex flex-col items-center justify-center">
+                    <h2 class="font-semibold text-xl">عفوًا....لم يتم العثور على
+                        أي منتجات</h2>
+                    <p
+                        class="text-gray-500 my-3 text-center text-sm">"في الوقت الحالي، قائمة أمنياتك فارغة، ولا توجد منتجات مضافة في الوقت الحالي."</p>
+
+                    <img class="mt-5" src="./noWishlist.svg" alt="">
+
+                </div>
+            </div>
+
+        </div>
+
+       
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js">
+</script>
+        <script src="app.js"></script>
+    </body>
+
+</html>

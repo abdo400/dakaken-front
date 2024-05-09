@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Order</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+            rel="stylesheet">
+
+        <!--------------- fontawsome ------------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" type="text/css" href="../output.css" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    </head>
+
+    <body dir="rtl">
+
+        <div class="container mx-auto mt-20">
+            <ul
+                class="flex flex-wrap text-sm font-medium text-center text-gray-400 arabic-regular">
+                <li class="me-2">
+                    <a href="../homepage/Dakaken Home Page.html" aria-current="page"
+                        class="inline-block p-4 rounded-t-lg w-[120px] rounded-tl-[100px]">الرئيسية</a>
+                </li>
+                
+                <li class="me-2">
+                    <a href="myOrder.html"
+                        class="inline-block p-4 rounded-t-lg bg-[#2DB2D4] text-white ">
+                        طلباتي
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="mt-5 arabic-regular" id="parentAddToCart">
+                    <div
+                        id="cards"
+                        class="bg-white p-2  grid lg:grid-cols-2 gap-5">
+
+                    </div>
+                 
+            </div>
+
+            <!-- no credit -->
+
+            <div id="parentNoCart" class="hidden mt-20 p-5">
+                <div class="flex flex-col items-center justify-center">
+                    <h2 class="font-semibold text-xl">عفوًا....لم يتم العثور على
+                        أي منتجات</h2>
+                    <p
+                        class="text-gray-500 my-3 text-center text-sm">"في الوقت الحالي، قائمة أمنياتك فارغة، ولا توجد منتجات مضافة في الوقت الحالي."</p>
+
+                    <img class="mt-5" src="./noOrder.svg" alt="">
+
+                </div>
+            </div>
+
+        </div>
+
+      
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js">
+</script>
+        <script src="app.js"></script>
+    </body>
+
+</html>
