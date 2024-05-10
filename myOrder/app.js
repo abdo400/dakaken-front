@@ -1,7 +1,5 @@
 
 const cards = document.getElementById("cards")
-const addCredit = document.getElementById("addCredit")
-const payment1 = document.getElementById("payment1")
 
 let data = [
     {
@@ -29,8 +27,6 @@ let data = [
         status: "تم الشحن"
     },
 ]
-
-
 
 const drawing = () => cards.innerHTML = data.map((item) => (`  <div class="flex flex-col rounded-xl  md:flex-row justify-between shadow-lg  mb-3 md:mb-7 px-3 py-4">
     <div class="flex flex-col flex-1">
