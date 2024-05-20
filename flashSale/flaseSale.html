@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Flash Sale</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+            rel="stylesheet">
+
+        <!--------------- fontawsome ------------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+            rel="stylesheet" />
+
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link rel="stylesheet" type="text/css" href="../output.css" />
+        <link rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+    </head>
+
+    <body dir="rtl">
+
+        <div class="container mx-auto p-2 mt-20 arabic-regular">
+            <ul
+                class="flex flex-wrap text-sm font-medium text-center text-gray-400 arabic-regular">
+                <li class="me-2">
+                    <a href="../homepage/Dakaken Home Page.html"
+                        aria-current="page"
+                        class="inline-block p-4 rounded-t-lg w-[120px] rounded-tl-[100px]">الرئيسية</a>
+                </li>
+
+                <li class="me-2">
+                    <a href="./flaseSale.html"
+                        class="flex p-4 rounded-t-lg bg-[#2DB2D4] text-white ">
+
+                        <svg width="18" height="21" viewBox="0 0 18 21"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.0002 2.5C12.1645 3.25391 11.4099 4.04648 10.7413 4.84258C9.64607 3.37578 8.28804 1.88789 6.75 0.5C2.80205 4.06133 0 8.70156 0 11.5C0 16.4707 4.02951 20.5 9 20.5C13.9705 20.5 18 16.4707 18 11.5C18 9.41914 15.9115 5.12734 13.0002 2.5ZM12.2179 15.8066C11.3476 16.3988 10.2745 16.75 9.11491 16.75C6.21603 16.75 3.85714 14.8852 3.85714 11.8574C3.85714 10.3492 4.83388 9.02031 6.78174 6.75C7.06018 7.06172 10.7526 11.6461 10.7526 11.6461L13.1083 9.03359C13.2746 9.30117 13.4261 9.56289 13.5611 9.81367C14.66 11.8523 14.1963 14.4609 12.2179 15.8066Z"
+                                fill="#F49B57" />
+                        </svg>
+                        <span class="ms-2">Flash Sale</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div id="indicators-carousel"
+                class="relative w-full flex flex-row-reverse justify-between items-center bg-[#F49B57E5] mt-10 mb-5 rounded-3xl"
+                data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div
+                    class="h-[500px] flex-1 overflow-hidden rounded-lg">
+
+                    <swiper-container id="slider"
+                        class="swiperFlashSale sm:me-2 lg:me-8 h-full"
+                        init="false">
+
+                    </swiper-container>
+
+                </div>
+
+                <div
+                    class="hidden h-full w-1/2 sm:flex flex-col justify-center px-10 text-white">
+                    <h1 class="text-4xl xl:text-5xl mb-5 font-semibold">Flash
+                        Sale</h1>
+                    <p class="font-medium md:w-3/4">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore</p>
+                    <span class="mt-5 text-xl md:text-4xl font-bold">05 : 42 :
+                        19 : 54</span>
+                </div>
+
+                <!-- next prev Swiper -->
+                <div
+                    class="flex absolute justify-center bottom-0 left-1/2 -translate-x-1/2 items-center pb-5 z-10 ">
+                    <button id="prevFlash" type="button"
+                        class="flex justify-center items-center me-4 h-full cursor-pointer group focus:outline-none">
+                        <span
+                            class="text-gray-900 hover:text-gray-600  group-focus:text-gray-600">
+                            <svg class="rtl:rotate-180 w-5 h-5"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 14 10">
+                                <path stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M13 5H1m0 0 4 4M1 5l4-4" />
+                            </svg>
+                        </span>
+                    </button>
+                    <button id="nextFlash" type="button"
+                        class="flex justify-center items-center h-full cursor-pointer group focus:outline-none">
+                        <span
+                            class="text-gray-900 hover:text-gray-600  group-focus:text-gray-600">
+                            <svg class="rtl:rotate-180 w-5 h-5"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 14 10">
+                                <path stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+
+                <a class="text-white absolute left-10 bottom-10 text-xl z-10 font-bold" href="#">المزيد</a>
+
+
+            </div>
+
+            <button data-drawer-target="default-sidebar"
+                data-drawer-toggle="default-sidebar"
+                aria-controls="default-sidebar" type="button"
+                class="inline-flex items-center p-2 mt-2  text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange">
+                <span class="sr-only">Open sidebar</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd" fill-rule="evenodd"
+                        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+                </svg>
+            </button>
+
+            <div class="mb-5 px-2 flex">
+
+                <aside id="default-sidebar"
+                    class="fixed lg:static duration-500 top-0 right-0 z-40 w-72 h-screen lg:h-screen  transition-transform translate-x-full lg:translate-x-0"
+                    aria-label="Sidebar">
+                    <div
+                        class="h-full w-72 p-3 overflow-y-auto bg-gray-50 border rounded-lg ">
+                        <a href="./flaseSale.html"
+                            class="flex items-center px-2 pb-2  rounded-lg hover:bg-gray-200 group">
+                            <span class="text-gray-900 font-medium">إظهار كافة
+                                الفئات</span>
+                        </a>
+                        <!-- category -->
+                        <ul class="space-y-2 font-medium border-t mb-5">
+                            <p class="m-3 text-gray-600">الاقسام</p>
+                            <li>
+                                <label for="checkbox-item-1"
+                                    class="flex items-center w-full p-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input aria-controls="dropdown-1"
+                                        data-collapse-toggle="dropdown-1"
+                                        id="checkbox-item-1" type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <span
+                                        class="flex-1 ms-3 text-start rtl:text-right whitespace-nowrap">Flash
+                                        Sale</span>
+                                </label>
+                                <ul id="dropdown-1"
+                                    class="hidden py-2 px-6 space-y-2">
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">مجوهرات
+                                            (20)</button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">(20)
+                                            Top </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">(20)
+                                            Bottom </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">(20)
+                                            Suites </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">(20)
+                                            Outer </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">(20)
+                                            Dress </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">(20)
+                                            Hyped T-Shirt </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <label for="checkbox-item-2"
+                                    class="flex items-center w-full p-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input aria-controls="dropdown-2"
+                                        data-collapse-toggle="dropdown-2"
+                                        id="checkbox-item-2" type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <span
+                                        class="flex-1 ms-3 text-start rtl:text-right whitespace-nowrap">الأحذية
+                                        والملابس</span>
+                                </label>
+                                <ul id="dropdown-2"
+                                    class="hidden py-2 px-6 space-y-2">
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">(20)
+                                            Dress </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">(20)
+                                            Hyped T-Shirt </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <label for="checkbox-item-3"
+                                    class="flex items-center w-full p-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input aria-controls="dropdown-3"
+                                        data-collapse-toggle="dropdown-3"
+                                        id="checkbox-item-3" type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <span
+                                        class="flex-1 ms-3 text-start rtl:text-right whitespace-nowrap">اكسسوارات
+                                        مجوهرات</span>
+                                </label>
+                                <ul id="dropdown-3"
+                                    class="hidden py-2 px-6 space-y-2">
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">(20)
+                                            Dress </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center w-full p-2 text-gray-600 text-sm transition duration-75 rounded-lg pl-11 group hover:bg-gray-200 ">(20)
+                                            Hyped T-Shirt </button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- rating -->
+                        <ul class="space-y-2 font-medium border-t mb-5">
+                            <p class="m-3 text-gray-600">التقيم</p>
+                            <li>
+                                <label for="checkbox-rating-0star"
+                                    class="flex items-center w-full px-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input
+                                        id="checkbox-rating-0star"
+                                        type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <div class="flex items-center ms-2">
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="checkbox-rating-1star"
+                                    class="flex items-center w-full px-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input
+                                        id="checkbox-rating-1star"
+                                        type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <div class="flex items-center ms-2">
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="checkbox-rating-2stars"
+                                    class="flex items-center w-full px-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input
+                                        id="checkbox-rating-2stars"
+                                        type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <div class="flex items-center ms-2">
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="checkbox-rating-3stars"
+                                    class="flex items-center w-full px-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input
+                                        id="checkbox-rating-3stars"
+                                        type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <div class="flex items-center ms-2">
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="checkbox-rating-4stars"
+                                    class="flex items-center w-full px-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input
+                                        id="checkbox-rating-4stars"
+                                        type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <div class="flex items-center ms-2">
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRatingNot.svg"
+                                            alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="checkbox-rating-5stars"
+                                    class="flex items-center w-full px-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input
+                                        id="checkbox-rating-5stars"
+                                        type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <div class="flex items-center ms-2">
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                        <img class="w-6 h-6 me-1"
+                                            src="./images/starRating.svg" alt>
+                                    </div>
+                                </label>
+                            </li>
+
+                        </ul>
+                        <!-- colors -->
+                        <ul class="space-y-2 font-medium border-t mb-5">
+                            <p class="m-3 text-gray-600">الألوان</p>
+
+                            <div class="px-2" id="colors">
+
+                            </div>
+                        </ul>
+                        <!-- price -->
+                        <ul class="space-y-2 font-medium border-t mb-16 ">
+                            <p class="m-3 text-gray-600">السعر</p>
+                            <div class="ui range orange slider "
+                                id="slider-tooltip-2"></div>
+                        </ul>
+                        <!-- brands -->
+                        <ul class=" font-medium border-t mb-5">
+                            <p class="m-3 text-gray-600">الماركات</p>
+                            <li class="mt-4">
+                                <label for="checkbox-brand-zara"
+                                    class="flex items-center w-full px-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input
+                                        id="checkbox-brand-zara"
+                                        type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <span class="ms-3 text-sm ">ZARA</span>
+                                </label>
+                            </li>
+
+                            <li class="mt-4">
+                                <label for="checkbox-brand-Bersheka"
+                                    class="flex items-center w-full px-2 text-base select-none cursor-pointer text-gray-900 transition duration-75 rounded-lg group hover:bg-[#F49B57]/20">
+                                    <input
+                                        id="checkbox-brand-Bersheka"
+                                        type="checkbox"
+                                        class="w-4 h-4 text-[#F49B57] bg-gray-100 border-gray-300 rounded  focus:ring-0 ">
+                                    <span class="ms-3 text-sm ">Bersheka</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <!-- btn -->
+                        <div class="px-2">
+                            <button
+                                class="bg-orange hover:opacity-80 rounded-xl text-white font-semibold w-full py-1.5">تطبيق</button>
+                        </div>
+                    </div>
+                </aside>
+
+                <div
+                    class="lg:px-4 bottom-0 overflow-auto left-0 right-0  top-0">
+                    <div>
+                        <div id="products"
+                            class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-7 gap-10">
+
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center mt-10"
+                        aria-label="Page navigation example">
+                        <button
+                            class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700">Previous</button>
+                        <ul
+                            class="inline-flex -space-x-px text-sm font-semibold">
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center px-3 h-8 leading-tight text-white border border-gray-300 hover:bg-opacity-80 bg-[#2DB2D4]">1</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">2</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">3</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">4</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">5</a>
+                            </li>
+                        </ul>
+                        <button
+                            class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700">Next</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-10 px-2">
+                <div
+                    class="flex justify-between items-center mt-7 ">
+                    <h3 class="md:text-xl font-semibold">
+                        منتجات مميزة
+                    </h3>
+                    <div>
+                        <button
+                            class="swiper-prev bg-[#E4E4E7] p-2 rounded-lg hover:opacity-70 disabled:hover:opacity-70 disabled:opacity-70">
+                            <svg width="20" height="20"
+                                viewBox="0 0 16 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.61996 12.5466L13.6666 8.49996L9.61996 4.4533"
+                                    stroke="black"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path opacity="0.4"
+                                    d="M2.33334 8.5L13.5533 8.5"
+                                    stroke="black"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button
+                            class="swiper-next bg-[#2DB2D4] p-2 rounded-lg ms-4 hover:opacity-70 disabled:hover:opacity-70 disabled:opacity-70">
+                            <svg width="20" height="20"
+                                viewBox="0 0 16 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.38004 4.45337L2.33337 8.50004L6.38004 12.5467"
+                                    stroke="white"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path opacity="0.4"
+                                    d="M13.6667 8.5H2.44666"
+                                    stroke="white"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+
+                <swiper-container
+                    class="endSwiper h-[440px] sm:h-[300px]"
+                    init="false">
+                    <swiper-slide>
+                        <div
+                            class="flex flex-col sm:flex-row items-center">
+                            <div
+                                class="w-full h-[250px] sm:h-[160px] lg:w-[260px] 2xl:w-[160px]">
+                                <img
+                                    class="object-cover  rounded-xl"
+                                    src="https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38="
+                                    alt>
+                            </div>
+                            <div
+                                class="flex flex-col justify-between sm:items-start p-4 ">
+                                <h5
+                                    class="mb-2 text-base font-semibold sm:text-start">Jenny's
+                                    Closets - توب شتوي نسائي،
+                                    أخضر</h5>
+                                <span
+                                    class="text-orange font-medium">$976.33</span>
+                                <div
+                                    class="flex justify-center mt-2">
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                </div>
+                            </div>
+                        </div>
+
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div
+                            class="flex flex-col sm:flex-row items-center">
+                            <div
+                                class="w-full h-[250px] sm:h-[160px] lg:w-[260px] 2xl:w-[160px]">
+                                <img
+                                    class="object-cover  rounded-xl"
+                                    src="https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38="
+                                    alt>
+                            </div>
+                            <div
+                                class="flex flex-col justify-between sm:items-start p-4 ">
+                                <h5
+                                    class="mb-2 text-base font-semibold sm:text-start">Jenny's
+                                    Closets - توب شتوي نسائي،
+                                    أخضر</h5>
+                                <span
+                                    class="text-orange font-medium">$976.33</span>
+                                <div
+                                    class="flex justify-center mt-2">
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                </div>
+                            </div>
+                        </div>
+
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div
+                            class="flex flex-col sm:flex-row items-center">
+                            <div
+                                class="w-full h-[250px] sm:h-[160px] lg:w-[260px] 2xl:w-[160px]">
+                                <img
+                                    class="object-cover  rounded-xl"
+                                    src="https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38="
+                                    alt>
+                            </div>
+                            <div
+                                class="flex flex-col justify-between sm:items-start p-4 ">
+                                <h5
+                                    class="mb-2 text-base font-semibold sm:text-start">Jenny's
+                                    Closets - توب شتوي نسائي،
+                                    أخضر</h5>
+                                <span
+                                    class="text-orange font-medium">$976.33</span>
+                                <div
+                                    class="flex justify-center mt-2">
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                </div>
+                            </div>
+                        </div>
+
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div
+                            class="flex flex-col sm:flex-row items-center">
+                            <div
+                                class="w-full h-[250px] sm:h-[160px] lg:w-[260px] 2xl:w-[160px]">
+                                <img
+                                    class="object-cover  rounded-xl"
+                                    src="https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38="
+                                    alt>
+                            </div>
+                            <div
+                                class="flex flex-col justify-between sm:items-start p-4 ">
+                                <h5
+                                    class="mb-2 text-base font-semibold sm:text-start">Jenny's
+                                    Closets - توب شتوي نسائي،
+                                    أخضر</h5>
+                                <span
+                                    class="text-orange font-medium">$976.33</span>
+                                <div
+                                    class="flex justify-center mt-2">
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                </div>
+                            </div>
+                        </div>
+
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div
+                            class="flex flex-col sm:flex-row items-center">
+                            <div
+                                class="w-full h-[250px] sm:h-[160px] lg:w-[260px] 2xl:w-[160px]">
+                                <img
+                                    class="object-cover  rounded-xl"
+                                    src="https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38="
+                                    alt>
+                            </div>
+                            <div
+                                class="flex flex-col justify-between sm:items-start p-4 ">
+                                <h5
+                                    class="mb-2 text-base font-semibold sm:text-start">Jenny's
+                                    Closets - توب شتوي نسائي،
+                                    أخضر</h5>
+                                <span
+                                    class="text-orange font-medium">$976.33</span>
+                                <div
+                                    class="flex justify-center mt-2">
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                    <img class="w-4 h-4 me-1"
+                                        src="./images/starRating.svg"
+                                        alt>
+                                </div>
+                            </div>
+                        </div>
+
+                    </swiper-slide>
+
+                </swiper-container>
+
+            </div>
+
+        </div>
+
+        <script src="app.js"></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js">
+        </script>
+
+        <script>
+    const endSwiper = document.querySelector('.endSwiper')
+    Object.assign(endSwiper, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+   
+    navigation: {
+    nextEl: '.swiper-next',
+    prevEl: '.swiper-prev',
+    },
+
+    
+    breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    },
+    });
+    endSwiper.initialize();
+
+
+
+
+
+
+    const swiperFlashSale = document.querySelector('.swiperFlashSale')
+    Object.assign(swiperFlashSale, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      
+      navigation: {
+        nextEl: '#nextFlash',
+        prevEl: '#prevFlash',
+      },
+      breakpoints: {
+        1280: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          
+        },
+      },
+
+
+    });
+    swiperFlashSale.initialize();
+    
+    
+</script>
+    </body>
+
+</html>
